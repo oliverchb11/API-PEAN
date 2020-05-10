@@ -4,7 +4,7 @@
   "description": "API RESTE PEAN ",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon backend/src/index.js"
   },
   "repository": {
     "type": "git",
