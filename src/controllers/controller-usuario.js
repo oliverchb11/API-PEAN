@@ -6,11 +6,11 @@ client.connect();
 controller.getUsuario = async (req, res) => {
   try {
     const response = await client.query("SELECT * FROM usuarios");
-    client.end();
+
     return res.status(200).json(response.rows);
   } catch (err) {
     console.log(err);
-    client.end();
+
     return res.status(500).json("error en la consulta");
   }
 };
@@ -22,11 +22,11 @@ controller.getUsuarioId = async (req, res) => {
       "SELECT * FROM usuarios WHERE id = $1",
       [id]
     );
-    client.end();
+
     return res.status(200).json(response.rows);
   } catch (err) {
     console.log(err);
-    client.end();
+
     return res.status(500).json("error");
   }
 };
